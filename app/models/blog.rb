@@ -5,4 +5,7 @@ class Blog < ApplicationRecord
 
   # Internal Rails Method
   validates_presence_of :title, :body
+
+  # Relationship
+  belongs_to :topic
 end
