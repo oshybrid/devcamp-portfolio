@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_12_09_000426) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
-    t.integer "status", default: 0
+    t.integer "status", default: 0   # Setup a data defualt
     t.bigint "topic_id"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true
     t.index ["topic_id"], name: "index_blogs_on_topic_id"
