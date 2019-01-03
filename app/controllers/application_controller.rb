@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  require 'concerns/devise_whitelist.rb'
-  include DeviseWhitelist
+  
+  require 'concerns/devise_whitelist_concern.rb'
+  require 'concerns/set_source_concern.rb'
+  require 'concerns/current_user_concern.rb'
+  include DeviseWhitelistConcern
+  include SetSourceConcern
+  include CurrentUserConcern
 end
