@@ -18,6 +18,7 @@
     <%= render "shared/nav", location: 'top' %>
     <%= login_helper %>
     <%= yield %>
+    <%= source_helper("portfolio") %>
 
     <p>
       <% if session[:source] %>
