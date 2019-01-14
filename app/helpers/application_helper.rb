@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:P, greeting, class: "source-greeting")
     end
   end
+
+  def copyright_generator
+    DevcampViewToolBsh::Renderer.copyright 'Brad Hutchins', 'All rights reserved'
+  end
 end

@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/oshybrid/devcamp_view_tool_bsh
+  revision: 261c1b4d6ab371bccf4b12cb7363f5a467f317df
+  specs:
+    devcamp_view_tool_bsh (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -214,6 +220,7 @@ DEPENDENCIES
   bootstrap (~> 4.2.1)
   byebug
   coffee-rails (~> 4.2)
+  devcamp_view_tool_bsh!
   devise (~> 4.5)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.5)
