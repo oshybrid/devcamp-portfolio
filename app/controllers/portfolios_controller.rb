@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
   layout "portfolio"
 
   def index
@@ -15,7 +16,7 @@ class PortfoliosController < ApplicationController
   end
   
   def create
-    @portfolio_individual_item = Portfolio.new(portfolio_params)
+    
 
     respond_to do |format|
       if @portfolio_individual_item.save
@@ -27,7 +28,7 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_individual_item = Portfolio.find(params[:id])
+  
     
   end
 
@@ -43,15 +44,15 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio_individual_item = Portfolio.find(params[:id])
+    #binding.pry
   end
 
   def destroy
     # This is going to perform the Lookup
-    @portfolio_individual_item = Portfolio.find(params[:id])
+    
 
     # Destroy the record
-    @portfolio_individual_item.destroy
+   
 
     # Redirect
     respond_to do |format|
@@ -67,6 +68,10 @@ class PortfoliosController < ApplicationController
                                       :body, 
                                       technologies_attributes: [:name]
                                       )
+  end
+
+  def set_portfolio_item
+    @portfolio_individual_item = Portfolio.find(params[:id])
   end
 
 end

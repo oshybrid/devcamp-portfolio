@@ -8,4 +8,13 @@ class Blog < ApplicationRecord
 
   # Relationship
   belongs_to :topic
+
+  def self.special_blogs
+    all
+  end
+
+  def self.feature_blogs
+    limit(2)
+  end
+
 end
