@@ -186,3 +186,16 @@ body {
 .register-text{
   text-align: right;
 }
+
+.card-block-margin {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.login > .card{
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
