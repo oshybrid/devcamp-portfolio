@@ -169,11 +169,20 @@ body {
   text-align: left;
  }
 
+ .auth-links a{
+  color: black;
+}
+
  .card-block > .row {
   margin-left: 0;
   margin-right: 0;
  }
 
- .auth-links a{
-   color: black;
- }
+.sign-up-form-row {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.register-text{
+  text-align: right;
+}
