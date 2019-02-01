@@ -15,6 +15,14 @@ class PortfoliosController < ApplicationController
     @portfolio_individual_item = Portfolio.new
     3.times { @portfolio_individual_item.technologies.build }
   end
+
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+    
+    render nothing: true
+  end
   
   def create
     
